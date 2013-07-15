@@ -1,0 +1,9 @@
+/target/
+/.classpath
+/.project
+/*.DS_Store
+/logs/
+deploy.sh
+/.settings/
+/bin
+run_zhajinhua_traffic_server.sh
