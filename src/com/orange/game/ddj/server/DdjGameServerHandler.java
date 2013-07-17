@@ -47,28 +47,28 @@ public class DdjGameServerHandler extends GameServerHandler {
 			case JOIN_GAME_REQUEST:
 				return new DdjJoinGameRequestHandler(messageEvent);
 				
-			case BET_REQUEST:
-				session = GameEventExecutor.getInstance().getSessionManager().findSessionById((int)message.getSessionId());
-				if ( session != null && !session.isGamePlaying()) {
-					logger.info(message.getUserId() + " tries to bet but the game is over!!!");
-					return null;
-				}
-				return new BetRequestHandler(messageEvent);
+//			case BET_REQUEST:
+//				session = GameEventExecutor.getInstance().getSessionManager().findSessionById((int)message.getSessionId());
+//				if ( session != null && !session.isGamePlaying()) {
+//					logger.info(message.getUserId() + " tries to bet but the game is over!!!");
+//					return null;
+//				}
+//				return new BetRequestHandler(messageEvent);
 				
-			case CHECK_CARD_REQUEST:
-				return new CheckCardRequestHandler(messageEvent);
-				
-			case SHOW_CARD_REQUEST:
-				return new ShowCardRequestHandler(messageEvent);
-				
-			case COMPARE_CARD_REQUEST:
-				return new CompareCardReuqestHandler(messageEvent);
-				
-			case FOLD_CARD_REQUEST:
-				return new FoldCardRequestHandler(messageEvent);
-
-			case CHANGE_CARD_REQUEST:
-				return new ChangeCardRequestHandler(messageEvent);
+//			case CHECK_CARD_REQUEST:
+//				return new CheckCardRequestHandler(messageEvent);
+//				
+//			case SHOW_CARD_REQUEST:
+//				return new ShowCardRequestHandler(messageEvent);
+//				
+//			case COMPARE_CARD_REQUEST:
+//				return new CompareCardReuqestHandler(messageEvent);
+//				
+//			case FOLD_CARD_REQUEST:
+//				return new FoldCardRequestHandler(messageEvent);
+//
+//			case CHANGE_CARD_REQUEST:
+//				return new ChangeCardRequestHandler(messageEvent);
 				
 			case REGISTER_ROOMS_NOTIFICATION_REQUEST:
 				return new RegisterRoomsRequestHandler(messageEvent);
